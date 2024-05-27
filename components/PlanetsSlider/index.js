@@ -1,53 +1,26 @@
-// Write your code here
-import './index.css'
 import Slider from 'react-slick'
 import PlanetItem from '../PlanetItem'
 
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    />
-  );
-}
-
-
+import './index.css'
 
 const PlanetsSlider = props => {
-
-
-
-
   const {planetsList} = props
+  const {id} = planetsList
   const settings = {
-    dots: false,
     arrows: true,
+    infinite: true,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    swipeToSlide: true,
   }
   return (
     <div className="slider-container">
       <h1>PLANETS</h1>
       <Slider {...settings}>
         {planetsList.map(each => (
-          <PlanetItem planetsList={each} />
+          <PlanetItem planetsList={each} key={each.id} />
         ))}
       </Slider>
     </div>
