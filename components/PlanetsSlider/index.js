@@ -3,10 +3,6 @@ import './index.css'
 import Slider from 'react-slick'
 import PlanetItem from '../PlanetItem'
 
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-
-import './index.css'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
