@@ -1,0 +1,15 @@
+/* Write your CSS here */
+.imgstyle {
+  height: 500px;
+  width: 700px;
+}
+.imgcont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.parastyle {
+  color: white;
+}
